@@ -1,12 +1,19 @@
 const ingredients = []; // store ingredients in here...
 let cookingTime = 0; // finalized numerical value to be fed to chatGPT
+let ingredientsCounter = 0; // to count the number of ingredients
 
 window.onload = function(){
-    addIngredientBox(false); // automatically add the first textbox on load
+    addIngredientBox(true); // automatically add the first textbox on load
 }
 
 function addIngredientBox(allowRemove = True) {
+    if (ingredientsCounter >= 13) {
+        alert("Cannot add more than 13 ingredients");
+    } else {
+
+    
     const container = document.getElementById("ingredientBoxContainer");
+    
 
     // hold textbox and buttons!
     const ingredientBoxDiv = document.createElement("div");
@@ -16,6 +23,8 @@ function addIngredientBox(allowRemove = True) {
     const ingredientInput = document.createElement("input");
     ingredientInput.type = "text";
     ingredientInput.className = "ingredient-input"; // styling class
+
+    
 
     // we want to create a "+" button only for the first input
     const addButton = document.createElement("button");
@@ -27,19 +36,31 @@ function addIngredientBox(allowRemove = True) {
     ingredientBoxDiv.appendChild(addButton);
     ingredientBoxDiv.appendChild(ingredientInput);
 
+    
+
     // if we can, add a remove button (THIS WONT WORK FOR THE FIRST BOX)
     if (allowRemove) {
         const removeButton = document.createElement("button");
         removeButton.innerHTML = "🗑️";
         removeButton.className = "remove-button";
         removeButton.onclick = function() {
-            container.removeChild(ingredientBoxDiv); // remove the entire div
+            if (ingredientsCounter != 1)
+                {
+                    container.removeChild(ingredientBoxDiv); // remove the entire div    
+                    ingredientsCounter--;
+                    console.log(ingredientsCounter);
+                }
         };
+        
         ingredientBoxDiv.appendChild(removeButton);
+        ingredientsCounter++;
+        console.log(ingredientsCounter);
+        
     }
 
     // append to div to the container
     container.appendChild(ingredientBoxDiv);
+    }
 }
 
 function cook() {
