@@ -1,24 +1,20 @@
 /* title in top right, add a logo manually??? */
-#chefTitle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 50px;
-    font-weight: bold;
-    color: lightgreen;
-    background-color: black;
-
+.title {
+    margin: auto;
+    left: 50%;
 }
 
-#title {
-    align-items: center;
-    display: flex;
+.image {
+    margin: auto;
+    
 }
+
 
 /* all styles */
 body {
+    
     font-family: montserrat;
-    background-color: #f5f5f5;
+    background-color: #FCF0E3;
     /* margin: 0;
     padding: 0;
     
@@ -32,7 +28,7 @@ body {
 
 #form-container {
     height:800px;
-    background-color: #fff;
+    background-color: #FFF7E6;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -43,6 +39,31 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+}
+
+
+.timeToCookContainer {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 1%;
+    width: 150%;
+    padding: 15px;
+    display: block;
+    font-size: 30px;
+    margin: auto;
+}
+
+.time-input {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 15%;
+    width: 10%;
+    padding: 2px;
+    display: block;
+    font-size: 23px;
+    margin: auto;
 }
 
 .ingredient-input {
@@ -71,6 +92,9 @@ body {
 
 .cookButton {
     display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
     width: 12%;
     padding: 15px;
     font-size: 40px;
@@ -81,7 +105,7 @@ body {
     background-color: white;
     border: 1px solid black;
 
-    
+
 }
 
 @font-face {

@@ -48,13 +48,13 @@ function addIngredientBox(allowRemove = True) {
                 {
                     container.removeChild(ingredientBoxDiv); // remove the entire div    
                     ingredientsCounter--;
-                    console.log(ingredientsCounter);
+                    console.log(ingredients);
                 }
         };
         
         ingredientBoxDiv.appendChild(removeButton);
         ingredientsCounter++;
-        console.log(ingredientsCounter);
+        console.log(ingredients);
         
     }
 
