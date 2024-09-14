@@ -1,0 +1,14 @@
+{
+  "name": "myaichef",
+  "version": "1.0.0",
+  "description": "Project for VTHacks. Put in ingredients, get out recipes.",
+  "main": "scripts.js",
+  "type": "module",
+  "scripts": {
+    "start": "node serverFront.js serverBack.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "openai": "^4.61.0"
+  }
+}

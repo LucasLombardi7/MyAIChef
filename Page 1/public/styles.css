@@ -1,0 +1,160 @@
+/* title in top right, add a logo manually??? */
+.title {
+    margin: auto;
+    left: 50%;
+}
+
+.image {
+    margin: auto;
+    
+}
+
+
+/* all styles */
+body {
+    
+    font-family: montserrat;
+    background-color: #fffde5;
+    /* margin: 0;
+    padding: 0;
+    
+    */
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+#form-container {
+    height:800px;
+    background-color: #edb1b9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 1100px;
+}
+
+.ingredient-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.timeToCookContainer {
+    color:  #663c31;
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 1%;
+    width: 150%;
+    padding: 15px;
+    display: block;
+    font-size: 30px;
+    margin: auto;
+}
+
+.time-input {
+    color:  #fffde5;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 15%;
+    width: 10%;
+    padding: 2px;
+    display: block;
+    font-size: 23px;
+    margin: auto;
+}
+
+.ingredient-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.tb1 {
+    background-color : #505050;
+    background-image: url(images/mb_btn2.jpg);
+    color: #0090ff;
+    border-style: none;
+}
+
+.add-button, .remove-button {
+    background-color: #fffde5;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.add-button {
+    color: #663c31;
+}
+
+.remove-button {
+    color: red;
+    margin-left: 10px;
+}
+
+.pushButton {
+    color: #fffde5;
+}
+
+.cookButton {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+    width: 12%;
+    padding: 15px;
+    font-size: 40px;
+    display: block;
+    margin: auto;
+
+    cursor: pointer;
+    background-color: #fffde5;
+    border: 1px solid black;
+
+
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat-Regular.ttf);
+}
+
+/* From Uiverse.io by aasisodiya */ 
+button {
+    
+    background-color: #b18958;
+    font-family: montserrat;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 75px;
+    border-radius: 1rem;
+    color: #edb1b9;
+    box-shadow: 0 0.4rem #663c31;
+    cursor: pointer;
+   }
+   
+   button:active {
+    color:  #fffde5;
+    box-shadow: 0 0.2rem #663c31;
+    transform: translateY(0.2rem);
+   }
+   
+   button:hover:not(:disabled) {
+    background: #b18958;
+    color: #fffde5;
+    text-shadow: 0 0.1rem #663c31;
+   }
+   
+   button:disabled {
+    cursor: auto;
+    color: #663c31;
+   }

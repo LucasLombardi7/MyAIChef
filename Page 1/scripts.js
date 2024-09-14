@@ -1,3 +1,5 @@
+import { preProcess } from "../chef";
+
 const ingredients = []; // store ingredients in here...
 let cookingTime = 0; // finalized numerical value to be fed to chatGPT
 let ingredientsCounter = 0; // to count the number of ingredients
@@ -86,7 +88,9 @@ function cook() {
         ? `You can make something with: ${ingredients.join(", ")}`
         : "You need to add ingredients first.";
 
-    cookingTime = Number(timeToCook);
+    cookingTime = Number(ingredients, timeToCook);
+    
+    preProcess(ingredients, timeToCook);
 
     alert(ingredients);
     alert(cookingTime);
