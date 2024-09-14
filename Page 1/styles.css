@@ -35,7 +35,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 1600px;
 }
 
 .ingredient-box {
@@ -70,10 +70,12 @@ body {
 
 .cookButton {
     display: block;
-    width: 100%;
+    width: 12%;
     padding: 15px;
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 40px;
+    display: block;
+    margin: auto;
+    
     cursor: pointer;
     background-color: white;
     border: 1px solid black;
