@@ -1,11 +1,13 @@
-/* title in top right */
+/* title in top right, add a logo manually??? */
 #chefTitle {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
-    color: #333;
+    color: lightgreen;
+    background-color: black;
+
 }
 
 /* all styles */
@@ -25,23 +27,46 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
 }
 
-input, button {
-    margin: 10px 0;
+.ingredient-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ingredient-input {
+    flex: 1;
     padding: 10px;
     font-size: 16px;
+    margin-left: 10px;
+}
+
+.add-button, .remove-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.add-button {
+    color: green;
+}
+
+.remove-button {
+    color: red;
+    margin-left: 10px;
+}
+
+.cookButton {
+    display: block;
     width: 100%;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #eaeaea;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 4px;
+    padding: 15px;
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
 }

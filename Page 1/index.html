@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking App</title>
-    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div id="chefTitle">My AI Chef</div> <!-- put this top right corner-->
+    <div id="chefTitle">MyCHEF👨‍🍳</div> <!-- top right hand title -->
 
     <h1>Ingredient Cooking App</h1>
 
     <div id="form-container">
         <label for="ingredient">Enter Ingredients:</label>
 
-        <!-- dynamic textboxes-->
         <div id="ingredientBoxContainer">
-            <!-- textboxes need to be added dynamically here-->
+            <!-- textboxes will be added here -->
         </div>
 
-        <button id="addIngredientsButton" onclick="addIngredientsBox()">+ Add Ingredients</button>
-
-        <button onclick="cook()">Cook</button>
+        <!-- cook action button -->
+        <button class="cookButton" onclick="cook()">COOK</button>
     </div>
 
-    <!-- Link to the JavaScript file -->
     <script src="scripts.js"></script>
 </body>
 </html>
