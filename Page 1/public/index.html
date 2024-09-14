@@ -9,14 +9,19 @@
 </head>
 <body>
 
+    
+
     <div class="title"> 
         <h1>My CHEF</h1>
     </div>
 
 
     <div class="image">
-        <img style="float: right; margin-top: -75px;"  src = "chef.png" width = "60" height = "70">
+        <img style="float: right; margin-top: -75px;"  src = "chef.png" width = "80" height = "90">
     </div>
+
+
+    
 
 
 
@@ -32,14 +37,38 @@
         <!-- <div id="ingredientBoxContainer">
         </div> -->
 
-        <!-- "time to cook" button -->
-        <div class="timeToCookContainer">
-            <label for="timeToCook">Preferred Time to Cook:</label>
-            <input type="number" id="timeToCook" class="time-input" placeholder="Enter in minutes">
-        </div>
+        <!--TEXTBOX-->
+    <!-- <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+      <form class="c-form" action="">
+        <input class="c-form__input" placeholder="Time in Minutes" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+        <label class="c-form__buttonLabel" for="checkbox">
+          <button class="c-form__button" type="button">Set</button>
+        </label>
+        <label class="c-form__toggle" for="checkbox" data-title="Enter Cook Time"></label>
+      </form>
+    </div> -->
+
+        <!-- "time to cook" button
+        <div class="timeToCookContainer"> -->
+            <!-- <label for="timeToCook">Preferred Time to Cook:</label> -->
+            <!-- <input type="number" id="timeToCook" class="time-input" placeholder="Cook Time">
+        </div> -->
 
         <!-- button for cook action -->
         <button class="cookButton" onclick="cook()">COOK</button>
+        <!--New Textbox-->
+        <input class="c-checkbox" type="checkbox" id="checkbox">
+        <div class="c-formContainer">
+        <form class="c-form" action="">
+            <input class="c-form__input" placeholder="Time to Cook" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+            <label class="c-form__buttonLabel" for="checkbox">
+            <button class="c-form__button" type="button">Set</button>
+            </label>
+            <label class="c-form__toggle" for="checkbox" data-title="Enter Cook Time"></label>
+        </form>
+        </div>
+
     </div>
 
     <!-- Link to the JavaScript file -->

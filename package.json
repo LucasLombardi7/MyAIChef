@@ -5,7 +5,7 @@
   "main": "scripts.js",
   "type": "module",
   "scripts": {
-    "start": "node serverFront.js serverBack.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.21.0",
