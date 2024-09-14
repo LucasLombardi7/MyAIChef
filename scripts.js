@@ -2,12 +2,20 @@
 
 const ingredients = [];
 
-function addIngredient() {
-    //
-    return 0;
+function addIngredientBox() {
+    const container = document.getElementById("ingredientsBoxContainer");
+
+    // new div to hold textboxes
+    const ingredientBoxDiv = document.createElement("div");
+    ingredientBoxDiv.className = "ingredient-box"; // add 
+
+
 }
 
 function cook(){
-    //
-    return 0;
+    const message = ingredients.length > 0
+        ? 'You can make ...'
+        : "You need to add ingredients first."
+
+    alert(message);
 }

@@ -9,21 +9,21 @@
 </head>
 <body>
 
+    <div id="chefTitle">My AI Chef</div> <!-- put this top right corner-->
+
     <h1>Ingredient Cooking App</h1>
 
     <div id="form-container">
         <label for="ingredient">Enter Ingredients:</label>
-        <input type="text" id="ingredient" name="ingredient">
-        <button onclick="addIngredient()">Add Ingredient</button>
 
-        <ul id="ingredientList"></ul>
+        <!-- dynamic textboxes-->
+        <div id="ingredientBoxContainer">
+            <!-- textboxes need to be added dynamically here-->
+        </div>
+
+        <button id="addIngredientsButton" onclick="addIngredientsBox()">+ Add Ingredients</button>
 
         <button onclick="cook()">Cook</button>
-    </div>
-
-    <!-- top right hand logo-->
-    <div id="chefTitle">
-        <h1>My AI Chef</h1>
     </div>
 
     <!-- Link to the JavaScript file -->

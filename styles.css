@@ -1,8 +1,17 @@
-/* styles.css */
+/* title in top right */
+#chefTitle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
 
+/* all styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,25 +20,28 @@ body {
     height: 100vh;
 }
 
-#form-container{
-    background-color: white;
+#form-container {
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, button{
+input, button {
     margin: 10px 0;
-    padding: 10x;
+    padding: 10px;
     font-size: 16px;
     width: 100%;
 }
 
-#chefTitle{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: lightgreen;
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #eaeaea;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
 }
