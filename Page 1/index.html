@@ -9,13 +9,18 @@
 </head>
 <body>
 
+<<<<<<< Updated upstream
     <div id="chefTitle">My AI Chef</div> <!-- put this top right corner-->
+=======
+    <div id="chefTitle">My AI Chef</div> <!-- title in top right (replace with logo later) -->
+>>>>>>> Stashed changes
 
     <h1>Ingredient Cooking App</h1>
 
     <div id="form-container">
         <label for="ingredient">Enter Ingredients:</label>
 
+<<<<<<< Updated upstream
         <!-- dynamic textboxes-->
         <div id="ingredientBoxContainer">
             <!-- textboxes need to be added dynamically here-->
@@ -24,6 +29,20 @@
         <button id="addIngredientsButton" onclick="addIngredientsBox()">+ Add Ingredients</button>
 
         <button onclick="cook()">Cook</button>
+=======
+        <!-- textboxes that will be dynamically added -->
+        <div id="ingredientBoxContainer">
+        </div>
+
+        <!-- "time to cook" button -->
+        <div id="timeToCookContainer">
+            <label for="timeToCook">Preferred Time to Cook (min):</label>
+            <input type="number" id="timeToCook" class="time-input" placeholder="Enter cooking time in minutes">
+        </div>
+
+        <!-- button for cook action -->
+        <button class="cookButton" onclick="cook()">COOK</button>
+>>>>>>> Stashed changes
     </div>
 
     <!-- Link to the JavaScript file -->
