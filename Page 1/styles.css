@@ -12,7 +12,7 @@
 
 /* all styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: montserrat;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
@@ -71,15 +71,21 @@ body {
     border: 1px solid black;
 }
 
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat-Regular.ttf);
+}
+
 /* From Uiverse.io by aasisodiya */ 
 button {
     background-color: #eee;
+    font-family: montserrat;
     border: none;
     padding: 1rem;
     font-size: 1rem;
     width: 10em;
     border-radius: 1rem;
-    color: lightcoral;
+    color: #FFBBE6;
     box-shadow: 0 0.4rem #dfd9d9;
     cursor: pointer;
    }
@@ -91,7 +97,7 @@ button {
    }
    
    button:hover:not(:disabled) {
-    background: lightcoral;
+    background: #FFBBE6;
     color: white;
     text-shadow: 0 0.1rem #bcb4b4;
    }
