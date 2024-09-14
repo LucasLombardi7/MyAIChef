@@ -1,36 +1,30 @@
 import express from 'express';
 import path from 'path';
 import OpenAI from 'openai';
+import cors from "cors";
+
 const app1 = express();
 const port1 = 3000;
+
+app1.use(cors());
 
 const __dirname = path.resolve(); // You can directly use path.resolve() in CommonJS
 
 // Serve static files from the 'public' directory
 app1.use(express.static(path.join(__dirname, 'public')));
+//app1.use("/static", express.static('./static/'));
+
 
 // Serve the index.html file at the root URL
 app1.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start the server
-app1.listen(port1, () => {
-  console.log(`Server running at http://localhost:${port1}`);
-});
-
-/////////////////////////////////////////////////////
-
-const app2 = express();
-const port2 = 8080;
-
-// Serve static files from the 'public' directory
-app2.use(express.static(path.join(__dirname, 'public')));
-
 // Serve the index.html file at the root URL
-app2.get('/', (req, res) => {
+app1.get('/preProcess', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
 
 
 const openai = new OpenAI({
@@ -39,16 +33,6 @@ const openai = new OpenAI({
 });
 
 let contents = "I have";
-
-// Send the HTML file for the root path
-app2.get('/test', (req, res) => {
-    res.send("hello world")
-  });
-  
-// Send the HTML file for the root path
-app2.get('/preProcess', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
   
   
 function preProcess(ingredients, time){
@@ -83,10 +67,20 @@ function preProcess(ingredients, time){
   return (response.choices[0].message.content);
 }
 
+let data = {}; // Temporary in-memory storage
+
+app1.post('/preProcess', (req, res) => {
+  data = req.body;
+  res.send({ message: 'Data received succesfully '})
+})
 
 // Start the server
-app2.listen(port2, () => {
-  console.log(`Server running at http://localhost:${port2}`);
+app1.listen(port1, () => {
+  console.log(`Server running at http://localhost:${port1}`);
 });
+
+
+
+/////////////////////////////////////////////////////
 
 

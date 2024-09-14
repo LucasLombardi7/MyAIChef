@@ -72,10 +72,12 @@ function addIngredientBox(allowRemove = True) {
     }
 }
 
+
 async function callPreProcess(ingredients, time){
     try {
         const response = await fetch('/preProcess', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -86,13 +88,19 @@ async function callPreProcess(ingredients, time){
             throw new Error('Error calling API');
         }
 
-        const data = await response.json();
-        console.log('Server response:', data.message);
+        const data = await response.body();
+
+        console.log(ingredients)
+        console.log(time)
+
+        return data;
 
     } catch (error){
         console.error(error);
     }
 }
+
+
 
 
 function cook() {
@@ -119,10 +127,36 @@ function cook() {
         : "You need to add ingredients first.";
 
     cookingTime = Number(timeToCook);
-    
-    callPreProcess(ingredients, timeToCook)
 
-    alert(ingredients);
-    alert(cookingTime);
+    
+    function handlePreProcessWithPromises() {
+        const sticks = ingredients;
+        const time = timeToCook;
+    
+        // Call the function and handle the promise
+        callPreProcess(sticks, time)
+            .then((result) => {
+                if (result) {
+                    // Handle the successful response
+                    console.log('Processed data:', result);
+                } else {
+                    console.log('No result returned or an error occurred.');
+                }
+            })
+            .catch((error) => {
+                // Handle any errors that occurred during the fetch or processing
+                console.error('Error during processing:', error);
+            });
+    }
+    
+    // Execute the function
+    handlePreProcessWithPromises();
+
+    
+    //result = callPreProcess(ingredients, timeToCook);
+    //let result = new Promise(callPreProcess(ingredients, timeToCook));
+    //result.then(callPreProcess)
+    //console.log(result.valueOf());
+
     alert(message);
 }
