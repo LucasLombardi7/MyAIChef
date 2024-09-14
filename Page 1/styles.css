@@ -14,7 +14,7 @@
 body {
     
     font-family: montserrat;
-    background-color: #FCF0E3;
+    background-color: #fffde5;
     /* margin: 0;
     padding: 0;
     
@@ -28,11 +28,11 @@ body {
 
 #form-container {
     height:800px;
-    background-color: #FFF7E6;
+    background-color: #edb1b9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: auto;
+    width: 1100px;
 }
 
 .ingredient-box {
@@ -43,6 +43,7 @@ body {
 
 
 .timeToCookContainer {
+    color:  #663c31;
     display: block;
     position: absolute;
     bottom: 30px;
@@ -55,6 +56,7 @@ body {
 }
 
 .time-input {
+    color:  #fffde5;
     display: block;
     position: absolute;
     bottom: 15px;
@@ -73,7 +75,15 @@ body {
     margin-left: 10px;
 }
 
+.tb1 {
+    background-color : #505050;
+    background-image: url(images/mb_btn2.jpg);
+    color: #0090ff;
+    border-style: none;
+}
+
 .add-button, .remove-button {
+    background-color: #fffde5;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -82,12 +92,16 @@ body {
 }
 
 .add-button {
-    color: green;
+    color: #663c31;
 }
 
 .remove-button {
     color: red;
     margin-left: 10px;
+}
+
+.pushButton {
+    color: #fffde5;
 }
 
 .cookButton {
@@ -102,7 +116,7 @@ body {
     margin: auto;
 
     cursor: pointer;
-    background-color: white;
+    background-color: #fffde5;
     border: 1px solid black;
 
 
@@ -115,31 +129,32 @@ body {
 
 /* From Uiverse.io by aasisodiya */ 
 button {
-    background-color: #eee;
+    
+    background-color: #b18958;
     font-family: montserrat;
     border: none;
     padding: 1rem;
     font-size: 1rem;
     width: 75px;
     border-radius: 1rem;
-    color: #FFBBE6;
-    box-shadow: 0 0.4rem #dfd9d9;
+    color: #edb1b9;
+    box-shadow: 0 0.4rem #663c31;
     cursor: pointer;
    }
    
    button:active {
-    color: white;
-    box-shadow: 0 0.2rem #dfd9d9;
+    color:  #fffde5;
+    box-shadow: 0 0.2rem #663c31;
     transform: translateY(0.2rem);
    }
    
    button:hover:not(:disabled) {
-    background: #FFBBE6;
-    color: white;
-    text-shadow: 0 0.1rem #bcb4b4;
+    background: #b18958;
+    color: #fffde5;
+    text-shadow: 0 0.1rem #663c31;
    }
    
    button:disabled {
     cursor: auto;
-    color: grey;
+    color: #663c31;
    }
